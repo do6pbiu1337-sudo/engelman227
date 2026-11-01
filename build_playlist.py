@@ -45,6 +45,53 @@ CATEGORIES = {
 CATEGORY_ORDER = ["Детские", "Спорт", "Музыка", "Новости", "Кино и сериалы", "Познавательные",
                   "Развлечения", "Общие"]
 OTHER_CATEGORY = "Разное"
+# Only these channels go into the playlist, under these names: the owner's own channel list (his provider's
+# lineup), matched by hand to iptv-org ids. Keys are channel_key() values.
+CHANNELS = {
+    "ChannelOne.ru": "Первый канал", "Russia1.ru": "Россия 1", "NTV.ru": "НТВ", "Channel5.ru": "Пятый канал",
+    "RussiaK.ru": "Россия Культура", "Russia24.ru": "Россия 24", "Carousel.ru": "Карусель", "OTR.ru": "ОТР",
+    "TVCentr.ru": "ТВЦ", "RENTV.ru": "РЕН ТВ", "STS.ru": "СТС", "Domashniy.ru": "Домашний", "TV3.ru": "ТВ-3",
+    "Friday.ru": "Пятница", "Zvezda.ru": "Звезда", "Mir.ru": "Мир", "TNT.ru": "ТНТ", "MuzTV.ru": "МУЗ-ТВ",
+    "Volga.ru": "Волга", "Channel8.ru": "8 канал", "Che.ru": "Че", "Solnce.ru": "Солнце", "U.ru": "Ю",
+    "Russkiyroman.ru": "Русский роман", "Kinouzhas.ru": "Киноужас", "Domkino.ru": "Дом кино",
+    "Subbota.ru": "Суббота!", "Kineko.ru": "Кинеко", "Saphire.ru": "Сапфир", "red.ru": ".red",
+    "scifi.ru": ".sci-fi", "Kinokomedija.ru": "Кинокомедия", "STARTAir.ru": "START Air", "KinoTV.ru": "Кино ТВ",
+    "Kinomix.ru": "Киномикс", "NasheNovoeKino.ru": "Наше новое кино", "STSLove.ru": "СТС Love",
+    "black.ru": ".black", "A2.ru": "A2", "A1.ru": "A1", "IllusionPlus.ru": "Иллюзион+", "Hollywood.ru": "Hollywood",
+    "NST.ru": "НСТ", "RusskiyIllusion.ru": "Русский иллюзион", "vijuTV1000russkoe.ru": "viju TV1000 русское",
+    "vijuTV1000.ru": "viju TV1000", "vijuTV1000action.ru": "viju TV1000 action", "Cinema.ru": "Cinema",
+    "Komedia.ru": "Комедия", "Kinoseriya.ru": "Киносерия", "StarFamily.ru": "Star Family",
+    "StarCinema.ru": "Star Cinema", "NTVHit.ru": "НТВ Хит", "Pobeda.ru": "Победа",
+    "FeniksplusKino.ru": "Феникс+ Кино", "NTVSeries.ru": "НТВ Сериал", "Vremya.ru": "Время", "FAN.ru": "FAN",
+    "STARTWorld.ru": "Start World", "India.ru": "Индия", "TNT4.ru": "ТНТ4", "KVNTV.ru": "КВН ТВ",
+    "1HDMusicTelevision.ru": "1HD Music Television", "2x2.ru": "2x2", "Telecafe.ru": "Телекафе",
+    "Kuhnya.ru": "Кухня", "NTVStyle.ru": "НТВ Стиль", "Nostalgia.ru": "Ностальгия", "Zhivi.ru": "Живи",
+    "Sarafan.ru": "Сарафан", "360.ru": "Телеканал 360", "LapkiLive.ru": "Лапки LIVE", "TERRA.ru": "TERRA",
+    "Vmirezhivotnykh.ru": "В мире животных", "ZvezdaPlus.ru": "Звезда Плюс", "Arsenal.ru": "Арсенал",
+    "Doctor.ru": "Доктор", "BigPlanet.ru": "Big Planet", "MoyaPlaneta.ru": "Моя Планета", "Nauka.ru": "Наука",
+    "DaVinci.ru": "Da Vinci", "vijuHistory.ru": "viju History", "Ohotnikirybolov.ru": "Охотник и рыболов",
+    "Usadba.ru": "Усадьба", "Mama.ru": "Мама", "365daysTV.ru": "365 Дней", "Priklyucheniya.ru": "Приключения",
+    "Istoriya.ru": "История", "RTDocumentary.ru@Russian": "Russia Today Doc", "T24.ru": "Т24",
+    "vijuExplore.ru": "viju Explore", "vijuNature.ru": "viju Nature", "Bober.ru": "Бобер",
+    "UnknownRussia.ru": "Неизвестная Россия", "RTGTV.ru": "RTG", "MatchBoets.ru": "Матч! Боец",
+    "AutoPlus.ru": "Авто Плюс", "Avto24.ru": "Авто24", "MatchArena.ru": "Матч! Арена",
+    "MatchIgra.ru": "Матч! Игра", "MMATVcom.ru": "MMA-TV.com", "BoksTV.ru": "Бокс ТВ",
+    "MatchStrana.ru": "Матч! Страна", "RussianExtreme.ru": "Russian Extreme", "TiJi.ru": "TiJi", "Ani.ru": "Ani",
+    "Multilandia.ru": "Мультиландия", "SuperGeroi.ru": "СуперГерои", "Detskiy.ru": "Детский", "Mult.ru": "Мульт",
+    "GulliGirl.ru": "Gulli Girl", "O.ru": "О!", "RadostMoya.ru": "Радость моя", "Ryzhiy.ru": "Рыжий",
+    "Multimuzyka.ru": "Мультимузыка", "RUTV.ru": "Ru.TV", "MuzykaLive.ru": "Музыка Live",
+    "FONMusic.ru": "FON Music", "MuzykaPervogo.ru": "Музыка Первого", "BRIDGEClassic.ru": "Bridge TV Classic",
+    "EuropaPlusTV.ru": "Europa Plus TV", "BRIDGE.ru": "Bridge TV", "ClassicMusic.ru": "Classic Music",
+    "Izvestia.ru": "Известия", "RBKTV.ru": "РБК ТВ", "Mir24.ru": "Мир 24", "Maidan.ru": "Майдан",
+    "TNVTatarstan.ru": "ТНВ", "Groznyj.ru": "Грозный", "TNVPlanet.ru": "ТНВ Планета", "SilkWay.kz": "Silk Way",
+    "Belarus24.by": "Беларусь 24", "BST.ru": "БСТ", "BigAsia.ru": "Большая Азия",
+    "IndiyskoyeKino.ru": "Индийское кино", "StartTriumf.ru": "Старт Триумф",
+    "CartoonClassics.ru": "Cartoon Classic", "LDPRTV.ru": "ЛДПР ТВ", "vijuTV1000romantica.ru": "viju TV1000 romantica",
+    "vijuTV1000novella.ru": "viju TV1000 новелла", "TV21.ru": "ТВ-21",
+}
+# Links that did not play from Russia when checked with `python build_playlist.py --check-from-here` on a
+# home computer. GitHub's servers abroad cannot tell geo-blocking from a dead link, so this check runs at home.
+DEAD_HERE = Path(__file__).with_name("dead_in_russia.txt")
 MERGED_VARIANTS = {"SD", "HD", ""}          # эти варианты одного канала склеиваются в один
 CHECK_TIMEOUT = 8
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36"
@@ -141,11 +188,23 @@ def main():
             key = channel_key(e)
             if i > 0 and key not in russian:       # из списка «Россия», но не на русском
                 continue
+            if key not in CHANNELS:                # только каналы из списка владельца
+                continue
             channels.setdefault(key, []).append(e)
 
     urls = {e["url"] for es in channels.values() for e in es}
     with concurrent.futures.ThreadPoolExecutor(32) as pool:
         status = dict(zip(urls, pool.map(check, urls)))
+
+    if "--check-from-here" in sys.argv:
+        # Run at home in Russia: anything that does not answer here is recorded as not working.
+        dead_here = sorted(u for u, s in status.items() if s != "ok")
+        DEAD_HERE.write_text("\n".join(dead_here) + "\n", encoding="utf-8")
+        print(f"не отвечают отсюда: {len(dead_here)} ссылок, записано в {DEAD_HERE.name}")
+    if DEAD_HERE.exists():
+        for u in DEAD_HERE.read_text(encoding="utf-8").split():
+            if u in status:
+                status[u] = "dead"
 
     rank = {"ok": 0, "unknown": 1}
     lines, kept_channels, kept_urls, dead = ["#EXTM3U"], 0, 0, 0
@@ -171,7 +230,7 @@ def main():
         main_entry = max(entries, key=resolution)    # имя, логотип и группа от лучшей версии
         attrs = main_entry["attrs"]
         tvg = key if not key.startswith("name:") else ""
-        name = clean_name(main_entry)
+        name = CHANNELS[key]
         for e in alive:
             extra = ""
             ua = e["attrs"].get("http-user-agent")
