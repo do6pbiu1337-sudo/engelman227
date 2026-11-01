@@ -27,6 +27,24 @@ SOURCES = [
     "https://iptv-org.github.io/iptv/countries/ru.m3u",
 ]
 EXCLUDED_GROUPS = {"Religious", "Shop"}
+# Категории iptv-org -> свои русские. У канала с несколькими категориями берётся первая по порядку
+# CATEGORY_ORDER, так что каждый канал лежит ровно в одной категории.
+CATEGORIES = {
+    "General": "Общие",
+    "News": "Новости", "Business": "Новости", "Legislative": "Новости", "Weather": "Новости",
+    "Movies": "Кино и сериалы", "Series": "Кино и сериалы", "Classic": "Кино и сериалы",
+    "Kids": "Детские", "Animation": "Детские", "Family": "Развлечения",
+    "Sports": "Спорт",
+    "Music": "Музыка",
+    "Documentary": "Познавательные", "Science": "Познавательные", "Education": "Познавательные",
+    "Travel": "Познавательные", "Culture": "Познавательные", "Outdoor": "Познавательные",
+    "Auto": "Познавательные",
+    "Entertainment": "Развлечения", "Comedy": "Развлечения", "Lifestyle": "Развлечения",
+    "Cooking": "Развлечения", "Relax": "Развлечения",
+}
+CATEGORY_ORDER = ["Детские", "Спорт", "Музыка", "Новости", "Кино и сериалы", "Познавательные",
+                  "Развлечения", "Общие"]
+OTHER_CATEGORY = "Разное"
 MERGED_VARIANTS = {"SD", "HD", ""}          # эти варианты одного канала склеиваются в один
 CHECK_TIMEOUT = 8
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36"
@@ -48,7 +66,11 @@ def parse(text):
     for line in text.splitlines():
         line = line.strip()
         if line.startswith("#EXTINF"):
-            head, _, name = line.partition(",")
+            # The name follows the first comma after the last quoted attribute: a user agent such as
+            # "Mozilla/5.0 (KHTML, like Gecko)" has commas of its own.
+            last_quote = line.rfind('"')
+            comma = line.find(",", last_quote + 1)
+            head, name = line[:comma], line[comma + 1:]
             attrs = dict(ATTR.findall(head))
             cur = {"attrs": attrs, "name": name.strip(), "opts": []}
         elif line.startswith("#EXTVLCOPT") and cur is not None:
@@ -62,6 +84,15 @@ def parse(text):
 
 def groups(entry):
     return {g.strip() for g in entry["attrs"].get("group-title", "").split(";") if g.strip()}
+
+
+def category(entry):
+    """Одна русская категория: Детские раньше Общих, всё незнакомое и Undefined — в Разное."""
+    mapped = {CATEGORIES[g] for g in groups(entry) if g in CATEGORIES}
+    for c in CATEGORY_ORDER:
+        if c in mapped:
+            return c
+    return OTHER_CATEGORY
 
 
 def channel_key(entry):
@@ -118,7 +149,13 @@ def main():
 
     rank = {"ok": 0, "unknown": 1}
     lines, kept_channels, kept_urls, dead = ["#EXTM3U"], 0, 0, 0
-    for key, entries in sorted(channels.items(), key=lambda kv: clean_name(kv[1][0]).lower()):
+    def order(kv):
+        best = max(kv[1], key=resolution)
+        c = category(best)
+        rank_c = CATEGORY_ORDER.index(c) if c in CATEGORY_ORDER else len(CATEGORY_ORDER)
+        return (rank_c, clean_name(best).lower())
+
+    for key, entries in sorted(channels.items(), key=order):
         seen, alive = set(), []
         for e in entries:
             if e["url"] in seen:
@@ -144,7 +181,7 @@ def main():
             if ref:
                 extra += f' http-referrer="{ref}"'
             lines.append(f'#EXTINF:-1 tvg-id="{tvg}" tvg-logo="{attrs.get("tvg-logo", "")}"'
-                         f'{extra} group-title="{attrs.get("group-title", "")}",{name}')
+                         f'{extra} group-title="{category(main_entry)}",{name}')
             lines.extend(e["opts"])
             lines.append(e["url"])
             kept_urls += 1
