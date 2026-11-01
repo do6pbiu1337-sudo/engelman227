@@ -1,4 +1,4 @@
-# tv-playlist
+# engelman227
 
 Список русскоязычных телеканалов для IPTV-плеера. Он собирается каждый день из открытых списков
 [iptv-org](https://github.com/iptv-org/iptv): каналы России и каналы на русском языке.
@@ -6,7 +6,7 @@
 Ссылка для плеера:
 
 ```
-https://raw.githubusercontent.com/do6pbiu1337-sudo/tv-playlist/main/playlist.m3u
+https://raw.githubusercontent.com/do6pbiu1337-sudo/engelman227/main/playlist.m3u
 ```
 
 ## Что в нём
