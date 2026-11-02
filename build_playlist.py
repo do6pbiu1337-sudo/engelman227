@@ -92,6 +92,14 @@ CHANNELS = {
 # Links that did not play from Russia when checked with `python build_playlist.py --check-from-here` on a
 # home computer. GitHub's servers abroad cannot tell geo-blocking from a dead link, so this check runs at home.
 DEAD_HERE = Path(__file__).with_name("dead_in_russia.txt")
+# TV guide (EPG): free epg.one, Moscow time. The player matches channels by tvg-name; where epg.one spells a
+# channel differently than CHANNELS, EPG_NAMES gives its spelling.
+EPG_URL = "http://epg.one/epg.xml.gz"
+EPG_NAMES = {
+    "Пятница": "Пятница!", "Авто24": "Авто 24", "ТВ-21": "ТВ 21", "Bridge TV Classic": "Bridge Classic",
+    "Cartoon Classic": "Cartoon Classics", "Star Family": "Star Family Россия HD", "TiJi": "Tiji TV",
+    "365 Дней": "365 дней ТВ",
+}
 MERGED_VARIANTS = {"SD", "HD", ""}          # эти варианты одного канала склеиваются в один
 CHECK_TIMEOUT = 8
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36"
@@ -207,7 +215,7 @@ def main():
                 status[u] = "dead"
 
     rank = {"ok": 0, "unknown": 1}
-    lines, kept_channels, kept_urls, dead = ["#EXTM3U"], 0, 0, 0
+    lines, kept_channels, kept_urls, dead = [f'#EXTM3U url-tvg="{EPG_URL}"'], 0, 0, 0
     def order(kv):
         best = max(kv[1], key=resolution)
         c = category(best)
@@ -239,7 +247,7 @@ def main():
             ref = e["attrs"].get("http-referrer")
             if ref:
                 extra += f' http-referrer="{ref}"'
-            lines.append(f'#EXTINF:-1 tvg-id="{tvg}" tvg-logo="{attrs.get("tvg-logo", "")}"'
+            lines.append(f'#EXTINF:-1 tvg-id="{tvg}" tvg-name="{EPG_NAMES.get(name, name)}" tvg-logo="{attrs.get("tvg-logo", "")}"'
                          f'{extra} group-title="{category(main_entry)}",{name}')
             lines.extend(e["opts"])
             lines.append(e["url"])
