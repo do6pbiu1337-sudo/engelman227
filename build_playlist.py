@@ -98,7 +98,13 @@ EPG_URL = "http://epg.one/epg.xml.gz"
 EPG_NAMES = {
     "Пятница": "Пятница!", "Авто24": "Авто 24", "ТВ-21": "ТВ 21", "Bridge TV Classic": "Bridge Classic",
     "Cartoon Classic": "Cartoon Classics", "Star Family": "Star Family Россия HD", "TiJi": "Tiji TV",
-    "365 Дней": "365 дней ТВ",
+    "365 Дней": "365 дней ТВ", "Старт Триумф": "Старт Триумф HD", "Ru.TV": "RU.TV", "Дом кино": "Дом Кино",
+    "Индийское кино": "Индийское Кино", "Киноужас": "КИНОУЖАС", "START Air": "Start Air HD",
+    "viju TV1000": "Viju TV1000", "viju TV1000 action": "Viju TV1000 Action",
+    "viju TV1000 новелла": "Viju TV1000 Новелла HD", "viju Explore": "Viju Explore", "viju History": "Viju History",
+    "Арсенал": "Арсенал HD", "Охотник и рыболов": "Охотник и рыболов HD", "Russia Today Doc": "Russia today doc",
+    "RTG": "RTG TV", "8 канал": "Восьмой канал", "Ю": "Ю ТВ", "Большая Азия": "Большая Азия HD",
+    "Приключения": "Приключения HD", "В мире животных": "В мире животных HD",
 }
 MERGED_VARIANTS = {"SD", "HD", ""}          # эти варианты одного канала склеиваются в один
 CHECK_TIMEOUT = 8
