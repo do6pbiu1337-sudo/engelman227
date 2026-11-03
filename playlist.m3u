@@ -199,6 +199,8 @@ http://stream.mcquack.net/81/index.m3u8
 http://178.134.1.158:8081/t24/index.m3u8
 #EXTINF:-1 tvg-id="TNVTatarstan.ru" tvg-name="ТНВ" tvg-logo="https://i.imgur.com/58u9TQT.png" group-title="Разное",ТНВ
 https://user91229.clients-cdnnow.ru/hls/user91229_1.m3u8
+#EXTINF:-1 tvg-id="TVCentr.ru" tvg-name="ТВЦ" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/72/TV_Tsentr_2013_Logo.svg" group-title="Разное",ТВЦ
+http://185.71.81.6:8080/10/index.m3u8
 #EXTINF:-1 tvg-id="UnknownRussia.ru" tvg-name="Неизвестная Россия" tvg-logo="https://i.imgur.com/W7ste2f.png" group-title="Разное",Неизвестная Россия
 https://cdn.ntv.ru/unknown_russia/playlist.m3u8
 #EXTINF:-1 tvg-id="UnknownRussia.ru" tvg-name="Неизвестная Россия" tvg-logo="https://i.imgur.com/W7ste2f.png" group-title="Разное",Неизвестная Россия
