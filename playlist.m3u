@@ -69,6 +69,8 @@ https://stream8.cinerama.uz/1051/tracks-v1a1/mono.m3u8
 http://176.118.197.101/Nostalgiya/index.m3u8
 #EXTINF:-1 tvg-id="NTVSeries.ru" tvg-name="НТВ Сериал" tvg-logo="https://i.imgur.com/QdVa8tl.png" group-title="Кино и сериалы",НТВ Сериал
 http://stream.mcquack.net/301/index.m3u8
+#EXTINF:-1 tvg-id="NTVHit.ru" tvg-name="НТВ Хит" tvg-logo="https://i.imgur.com/FfKBvz5.png" group-title="Кино и сериалы",НТВ Хит
+http://178.134.1.158:8081/ntvhit/index.m3u8
 #EXTINF:-1 tvg-id="StarCinema.ru" tvg-name="Star Cinema" tvg-logo="https://i.imgur.com/5sis895.png" group-title="Кино и сериалы",Star Cinema
 https://dash2.antik.sk/live/test_star_cinema_atktv/playlist.m3u8
 #EXTINF:-1 tvg-id="StarFamily.ru" tvg-name="Star Family Россия HD" tvg-logo="https://i.imgur.com/eGuGHnZ.png" group-title="Кино и сериалы",Star Family
