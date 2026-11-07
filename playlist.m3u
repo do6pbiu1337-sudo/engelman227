@@ -105,6 +105,8 @@ https://stream8.cinerama.uz/1414/tracks-v1a1/mono.m3u8
 http://stream.mcquack.net/78/index.m3u8
 #EXTINF:-1 tvg-id="DaVinci.ru" tvg-name="Da Vinci" tvg-logo="https://i.imgur.com/V8AUJP6.png" group-title="Познавательные",Da Vinci
 http://stream.mcquack.net/238/index.m3u8
+#EXTINF:-1 tvg-id="MoyaPlaneta.ru" tvg-name="Моя Планета" tvg-logo="https://i.imgur.com/uIiAdBv.png" group-title="Познавательные",Моя Планета
+http://31.148.48.15/Moya_Planeta_HD/index.m3u8
 #EXTINF:-1 tvg-id="Ohotnikirybolov.ru" tvg-name="Охотник и рыболов HD" tvg-logo="https://i.imgur.com/Bj1jI7F.png" group-title="Познавательные",Охотник и рыболов
 http://stream.mcquack.net/194/index.m3u8
 #EXTINF:-1 tvg-id="Ohotnikirybolov.ru" tvg-name="Охотник и рыболов HD" tvg-logo="https://i.imgur.com/Bj1jI7F.png" group-title="Познавательные",Охотник и рыболов
