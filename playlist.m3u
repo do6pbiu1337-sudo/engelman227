@@ -29,8 +29,6 @@ http://178.134.1.158:8081/BRIDGE/index.m3u8
 http://5.188.159.128:8070/Bridge_TV_Classic/index.m3u8
 #EXTINF:-1 tvg-id="ClassicMusic.ru" tvg-name="Classic Music" tvg-logo="https://i.imgur.com/TpXs1qA.png" group-title="Музыка",Classic Music
 http://stream.mcquack.net/312/index.m3u8
-#EXTINF:-1 tvg-id="FONMusic.ru" tvg-name="FON Music" tvg-logo="https://i.imgur.com/tXABQDE.png" group-title="Музыка",FON Music
-https://stream8.cinerama.uz/1272/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="Maidan.ru" tvg-name="Майдан" tvg-logo="https://i.imgur.com/C8CCjZK.png" group-title="Музыка",Майдан
 https://live-maidantv.cdnvideo.ru/maidantv/maidantv.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="MuzTV.ru" tvg-name="МУЗ-ТВ" tvg-logo="https://i.imgur.com/BtqrHmz.png" group-title="Музыка",МУЗ-ТВ
