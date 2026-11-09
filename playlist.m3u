@@ -25,8 +25,6 @@ https://bl.webcaster.pro/media/playlist/free_fe8dc1b768a84b8b0333db826471f17e_hd
 http://176.118.197.101/1HD/index.m3u8
 #EXTINF:-1 tvg-id="BRIDGE.ru" tvg-name="Bridge TV" tvg-logo="https://i.imgur.com/qYObfrG.png" group-title="Музыка",Bridge TV
 http://178.134.1.158:8081/BRIDGE/index.m3u8
-#EXTINF:-1 tvg-id="BRIDGEClassic.ru" tvg-name="Bridge Classic" tvg-logo="https://i.imgur.com/JJTQq81.png" group-title="Музыка",Bridge TV Classic
-http://5.188.159.128:8070/Bridge_TV_Classic/index.m3u8
 #EXTINF:-1 tvg-id="ClassicMusic.ru" tvg-name="Classic Music" tvg-logo="https://i.imgur.com/TpXs1qA.png" group-title="Музыка",Classic Music
 http://stream.mcquack.net/312/index.m3u8
 #EXTINF:-1 tvg-id="Maidan.ru" tvg-name="Майдан" tvg-logo="https://i.imgur.com/C8CCjZK.png" group-title="Музыка",Майдан
@@ -127,8 +125,6 @@ http://46.53.200.153:7777/play/a01k/index.m3u8
 http://stream.mcquack.net/263/index.m3u8
 #EXTINF:-1 tvg-id="red.ru" tvg-name=".red" tvg-logo="https://i.imgur.com/GET9Qut.png" group-title="Развлечения",.red
 http://178.134.1.158:8081/red/index.m3u8
-#EXTINF:-1 tvg-id="red.ru" tvg-name=".red" tvg-logo="https://i.imgur.com/GET9Qut.png" group-title="Развлечения",.red
-http://5.188.159.128:8070/RED/index.m3u8
 #EXTINF:-1 tvg-id="2x2.ru" tvg-name="2x2" tvg-logo="https://i.imgur.com/fhQFLEl.png" group-title="Развлечения",2x2
 http://176.118.197.101/2x2/index.m3u8
 #EXTINF:-1 tvg-id="Channel8.ru" tvg-name="Восьмой канал" tvg-logo="https://i.imgur.com/nUSx1jF.png" group-title="Развлечения",8 канал
