@@ -128,7 +128,7 @@ http://176.118.197.101/2x2/index.m3u8
 #EXTINF:-1 tvg-id="Channel8.ru" tvg-name="Восьмой канал" tvg-logo="https://i.imgur.com/nUSx1jF.png" group-title="Развлечения",8 канал
 http://45.11.139.43:8555/8kanal/index.m3u8
 #EXTINF:-1 tvg-id="Che.ru" tvg-name="Че" tvg-logo="https://i.imgur.com/ZOcDGpB.png" group-title="Развлечения",Че
-http://176.118.197.101/Che/index.m3u8
+http://flussonic.linkintel.ru/che/index.m3u8
 #EXTINF:-1 tvg-id="Domashniy.ru" tvg-name="Домашний" tvg-logo="https://i.imgur.com/XVRwgom.png" group-title="Развлечения",Домашний
 http://31.148.5.241/kanal_14/index.m3u8
 #EXTINF:-1 tvg-id="Friday.ru" tvg-name="Пятница!" tvg-logo="https://i.imgur.com/UfmlXxe.png" group-title="Развлечения",Пятница
