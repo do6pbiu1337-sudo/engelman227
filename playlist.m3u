@@ -94,7 +94,7 @@ http://46.53.200.153:7777/play/Viju_Drama/index.m3u8
 #EXTINF:-1 tvg-id="vijuTV1000russkoe.ru" tvg-name="viju TV1000 русское" tvg-logo="https://i.imgur.com/Meak2y4.png" group-title="Кино и сериалы",viju TV1000 русское
 https://stream8.cinerama.uz/1058/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="scifi.ru" tvg-name=".sci-fi" tvg-logo="https://i.imgur.com/nSSUHcg.png" group-title="Познавательные",.sci-fi
-http://116.90.120.149:8000/play/a0ao/index.m3u8
+http://stream.mcquack.net/180/index.m3u8
 #EXTINF:-1 tvg-id="365daysTV.ru" tvg-name="365 дней ТВ" tvg-logo="https://i.imgur.com/NfnAiTR.png" group-title="Познавательные",365 Дней
 http://stream.mcquack.net/70/index.m3u8
 #EXTINF:-1 tvg-id="Arsenal.ru" tvg-name="Арсенал HD" tvg-logo="https://i.imgur.com/DBpVeb0.png" group-title="Познавательные",Арсенал
@@ -126,9 +126,7 @@ http://46.53.200.153:7777/play/a01j/index.m3u8
 #EXTINF:-1 tvg-id="vijuNature.ru" tvg-name="viju Nature" tvg-logo="https://i.imgur.com/8BPZ18l.png" group-title="Познавательные",viju Nature
 https://stream8.cinerama.uz/1228/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="black.ru" tvg-name=".black" tvg-logo="https://i.imgur.com/Q4A6ci4.png" group-title="Развлечения",.black
-http://116.90.120.149:8000/play/a0ac/index.m3u8
-#EXTINF:-1 tvg-id="black.ru" tvg-name=".black" tvg-logo="https://i.imgur.com/Q4A6ci4.png" group-title="Развлечения",.black
-http://116.90.120.149:8000/play/a0s4/index.m3u8
+http://s1.merlive.am/black/index.m3u8
 #EXTINF:-1 tvg-id="red.ru" tvg-name=".red" tvg-logo="https://i.imgur.com/GET9Qut.png" group-title="Развлечения",.red
 http://178.134.1.158:8081/red/index.m3u8
 #EXTINF:-1 tvg-id="2x2.ru" tvg-name="2x2" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/2x2_TV_Logo.svg/1920px-2x2_TV_Logo.svg.png" group-title="Развлечения",2x2
